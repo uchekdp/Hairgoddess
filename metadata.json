@@ -1,0 +1,6 @@
+{
+  "name": "Hairgoddess Beauty Home",
+  "description": "Discover your destination for beauty, grooming, relaxation, and personal care. Spa treatments, barbering, manicure, pedicure, beauty salon services, and luxury hair sales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
