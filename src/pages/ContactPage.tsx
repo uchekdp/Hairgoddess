@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CONTACT_INFO } from '../constants/brand';
 import { ContactFormData } from '../types';
+import { GoogleMapView } from '../components/GoogleMapView';
 import {
   Phone,
   Clock,
@@ -12,6 +13,7 @@ import {
   Sparkles,
   Instagram,
   Facebook,
+  Navigation,
 } from 'lucide-react';
 
 const SERVICE_OPTIONS = [
@@ -220,15 +222,19 @@ export const ContactPage: React.FC = () => {
                     <h4 className="text-xs font-semibold uppercase tracking-wider text-[#C6A15B]">
                       Studio Address
                     </h4>
-                    <p className="text-sm text-[#28252A] mt-0.5 font-medium">
-                      Hairgoddess Unisex Salon, Lagos, Nigeria
+                    <p className="text-sm text-[#28252A] mt-0.5 font-medium leading-snug">
+                      {CONTACT_INFO.address}
                     </p>
                     <p className="text-xs text-gray-500 mt-1">
-                      Precise studio address will be sent with your appointment confirmation.
+                      Landmark: Off Hostel Bus Stop, Ikotun, Lagos.
                     </p>
-                    <span className="text-[10px] text-gray-400 block mt-1">
-                      (Address field editable for exact premises)
-                    </span>
+                    <a
+                      href="#location-map"
+                      className="inline-flex items-center gap-1.5 text-xs text-[#245C45] hover:text-[#D96C98] font-medium mt-2"
+                    >
+                      <Navigation className="w-3.5 h-3.5 text-[#D96C98]" />
+                      <span>View on Interactive Map ↓</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -501,6 +507,25 @@ export const ContactPage: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Google Maps Location Section */}
+      <section className="py-16 sm:py-20 bg-[#FAF8F5] border-t border-[#F8DCE7]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="inline-block py-1 px-4 rounded-full bg-[#F8DCE7] text-[#D96C98] text-xs font-semibold uppercase tracking-[0.25em] mb-3 shadow-2xs">
+              Interactive Map & Navigation
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-light text-[#28252A] tracking-tight mb-2">
+              Find Hairgoddess Unisex Salon
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-600">
+              Easily navigate to our salon at 4 Authority Avenue, Hostel Bus Stop, Ikotun, Lagos.
+            </p>
+          </div>
+
+          <GoogleMapView />
         </div>
       </section>
     </div>

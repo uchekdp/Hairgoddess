@@ -120,7 +120,17 @@ export const Footer: React.FC = () => {
             <div className="space-y-3 text-xs sm:text-sm text-gray-600">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#D96C98] shrink-0 mt-0.5" />
-                <span>Hairgoddess Unisex Salon, Lagos, Nigeria</span>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    CONTACT_INFO.address
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#D96C98] transition-colors leading-snug"
+                  title="Open location in Google Maps"
+                >
+                  {CONTACT_INFO.address}
+                </a>
               </div>
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-[#D96C98] shrink-0 mt-0.5" />

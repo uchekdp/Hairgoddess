@@ -19,8 +19,14 @@ export const CONTACT_INFO = {
     'https://wa.me/2348035693291?text=Hello%20Hairgoddess%20Unisex%20Salon%2C%20I%20would%20like%20to%20enquire%20about%20your%20services.',
   facebookUrl: 'https://web.facebook.com/Hairgodddess',
   instagramUrl: 'https://www.instagram.com/hairgoddess5678?vrfl=aXZxczN0dHNlZjh1',
-  addressNote: 'Hairgoddess Unisex Salon, Lagos, Nigeria (Full street address provided upon appointment confirmation)',
-  location: 'Lagos, Nigeria',
+  address: '4 Authority Avenue, Hostel Bus Stop, Ikotun, Lagos, Nigeria',
+  addressShort: '4 Authority Ave, Hostel Bus Stop, Ikotun, Lagos',
+  addressNote: '4 Authority Avenue, Hostel Bus Stop, Ikotun, Lagos, Nigeria',
+  location: 'Ikotun, Lagos, Nigeria',
+  coordinates: {
+    lat: 6.5437,
+    lng: 3.2767,
+  },
   openingHours: 'Monday – Saturday: 9:00 AM – 7:00 PM | Sunday: By Appointment',
   email: 'contact@hairgoddessbeauty.com', // editable placeholder
 };
